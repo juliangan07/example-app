@@ -12,8 +12,8 @@ app.get('/api/health-check', (req, res) => res.json({up: true}));
 
 
 //middleware
-app.use(parser.urlencoded({extended : true}));
-
+// app.use(parser.urlencoded({extended : true}));
+app.use(parser.json());
 // routes
 // app.use('/', require('./routes'));
 // app.use('/api', require('./routes/api'));
