@@ -22,8 +22,9 @@ app.use(parser.json());
 
 app.get('/', (req, res) => {
     console.log('query', req.query);
-    const query = new QueryService(req.query);
-    res.send(query);
+    const queryService = new QueryService(req.query);
+    const response = queryService.getAnswer();
+    res.send(response);
 });
 
 // app.post('/', (req, res) => {
