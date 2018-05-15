@@ -12,7 +12,7 @@ app.get('/api/health-check', (req, res) => res.json({up: true}));
 
 
 //middleware
-// app.use(parser.urlencoded({extended : true}));
+app.use(parser.urlencoded({extended : true}));
 app.use(parser.json());
 
 // routes
@@ -20,9 +20,11 @@ app.use(parser.json());
 // app.use('/api', require('./routes/api'));
 
 app.get('/', (req, res) => {
-    console.log('req', req);
-    console.log('body', req.body);
-    console.log('path', req.body.path);
+    console.log('test', req.originalUrl);
+    console.log('test2', req.url);
+    console.log('path', req.path);
+    console.log('query', req.query);
+    console.log('search', req.search);
     res.send('OK');
 });
 
