@@ -15,12 +15,16 @@ app.get('/api/health-check', (req, res) => res.json({up: true}));
 // app.use('/api', require('./routes/api'));
 
 app.get('/', (req, res) => {
-    console.log(res.params);
+    res.send('OK');
+});
+
+app.post('/', (req, res) => {
+    console.log(res.param);
     res.send('OK');
 });
 
 app.use((req, res, next) => {
-    console.log('Rredirecting to index.');
+    console.log('Redirecting to index.');
     res.redirect('/');
   });
 
