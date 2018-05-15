@@ -2,13 +2,17 @@
 
 const express = require('express')
 const app = express()
+const parser = require('body-parser');
 
 app.set('port', (process.env.PORT || 3000));
-console.log(process.env);
 const port = app.get('port');
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
 app.get('/api/health-check', (req, res) => res.json({up: true}));
+
+
+//middleware
+app.use(parser.urlencoded({extended : true}));
 
 // routes
 // app.use('/', require('./routes'));
@@ -19,7 +23,7 @@ app.get('/', (req, res) => {
 });
 
 app.post('/', (req, res) => {
-    console.log(res.param);
+    console.log(req.body);
     res.send('OK');
 });
 
