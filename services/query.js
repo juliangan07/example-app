@@ -7,7 +7,7 @@ class QueryService {
         this.query = query.q;
 
         switch (this.query) {
-            case 'ping':
+            case 'Ping':
                 return 'OK';
                 break;
 
