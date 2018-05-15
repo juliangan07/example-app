@@ -36,7 +36,4 @@ app.use((req, res, next) => {
     res.redirect('/');
   });
 
-answerQuestions(body) {
-    const body = body;
-}
   module.exports = app;
