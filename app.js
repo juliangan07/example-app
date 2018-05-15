@@ -12,14 +12,15 @@ app.get('/api/health-check', (req, res) => res.json({up: true}));
 
 
 //middleware
-app.use(parser.urlencoded({extended : true}));
-// app.use(parser.json());
+// app.use(parser.urlencoded({extended : true}));
+app.use(parser.json());
 
 // routes
 // app.use('/', require('./routes'));
 // app.use('/api', require('./routes/api'));
 
 app.get('/', (req, res) => {
+    console.log('req', req);
     console.log('body', req.body);
     console.log('path', req.body.path);
     res.send('OK');
