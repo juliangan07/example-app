@@ -1,0 +1,15 @@
+{
+  "name": "emx",
+  "version": "1.0.0",
+  "description": "emx example app",
+  "main": "express.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Julian Gan",
+  "license": "MIT",
+  "dependencies": {
+    "eslint": "^4.19.1",
+    "express": "^4.16.3"
+  }
+}
