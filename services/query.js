@@ -33,10 +33,10 @@ class QueryService {
             case 'Puzzle':
                 const answer =
                 ` ABCD
-A=<<<
-B>=<>
-C>>=>
-D><<=
+A= 10
+B= 6
+C= 6
+D= 4
                 `
                 return answer;
                 break;
