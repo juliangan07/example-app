@@ -31,11 +31,13 @@ class QueryService {
                 break;
 
             case 'Puzzle':
-                return ` ABCD
+                return
+                ` ABCD
                 A=<<<
                 B>=<>
                 C>>=>
-                D><<=`;
+                D><<=
+                `;
                 break;
 
             case 'Years':
