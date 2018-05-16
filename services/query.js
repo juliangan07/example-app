@@ -27,11 +27,15 @@ class QueryService {
                 break;
 
             case 'Resume':
-                return 'https://www.dropbox.com/s/1859x8vt3oqvb91/Cover%20Letter%20-%20EMX.pdf?dl=0';
+                return 'https://www.dropbox.com/sh/oa8jzhh45uxakjp/AABCoc0JdmruUnAYkKt39FUUa?dl=0';
                 break;
 
             case 'Puzzle':
-                return '';
+                return ` ABCD
+                        A=<<<
+                        B>=<>
+                        C>>=>
+                        D><<=`;
                 break;
 
             case 'Years':
