@@ -21,6 +21,7 @@ app.use(parser.json());
 // app.use('/api', require('./routes/api'));
 
 app.get('/', (req, res) => {
+    console.log(req);
     const queryService = new QueryService(req.query);
     const response = queryService.getAnswer();
     res.send(response);
