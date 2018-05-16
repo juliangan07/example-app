@@ -32,10 +32,10 @@ class QueryService {
 
             case 'Puzzle':
                 return ` ABCD
-                        A=<<<
-                        B>=<>
-                        C>>=>
-                        D><<=`;
+                A=<<<
+                B>=<>
+                C>>=>
+                D><<=`;
                 break;
 
             case 'Years':
