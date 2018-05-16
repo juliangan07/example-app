@@ -32,12 +32,11 @@ class QueryService {
 
             case 'Puzzle':
                 const answer =
-                `
-                 ABCD
-                A=<<<
-                B>=<>
-                C>>=>
-                D><<=
+                ` ABCD
+A=<<<
+B>=<>
+C>>=>
+D><<=
                 `
                 return answer;
                 break;

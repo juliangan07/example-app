@@ -21,16 +21,15 @@ app.use(parser.json());
 // app.use('/api', require('./routes/api'));
 
 app.get('/', (req, res) => {
-    console.log('query', req.query);
     const queryService = new QueryService(req.query);
     const response = queryService.getAnswer();
     res.send(response);
 });
 
 // app.post('/', (req, res) => {
-//     console.log('body', req.body);
-//     console.log('path', req.body.path);
-//     res.send(req.body.path);
+//     const queryService = new QueryService(req.body);
+//     const response = queryService.getAnswer();
+//     res.send(response);
 // });
 
 app.use((req, res, next) => {
