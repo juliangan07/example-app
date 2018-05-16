@@ -31,13 +31,15 @@ class QueryService {
                 break;
 
             case 'Puzzle':
-                return
-                ` ABCD
+                const answer =
+                `
+                 ABCD
                 A=<<<
                 B>=<>
                 C>>=>
                 D><<=
-                `;
+                `
+                return answer;
                 break;
 
             case 'Years':
@@ -65,7 +67,7 @@ class QueryService {
                 break;
 
             default:
-                return false;
+                return 'Hello World!';
                 break;
         }
     }
