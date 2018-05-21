@@ -16,22 +16,11 @@ app.get('/api/health-check', (req, res) => res.json({up: true}));
 app.use(parser.urlencoded({extended : true}));
 app.use(parser.json());
 
-// routes
-// app.use('/', require('./routes'));
-// app.use('/api', require('./routes/api'));
-
 app.get('/', (req, res) => {
-    console.log(req);
     const queryService = new QueryService(req.query);
     const response = queryService.getAnswer();
     res.send(response);
 });
-
-// app.post('/', (req, res) => {
-//     const queryService = new QueryService(req.body);
-//     const response = queryService.getAnswer();
-//     res.send(response);
-// });
 
 app.use((req, res, next) => {
     console.log('Redirecting to index.');

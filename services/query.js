@@ -4,12 +4,11 @@ const lodash = require('lodash');
 
 class QueryService {
     constructor(query) {
-        this.query = query.q;
+        this.query = query;
     }
 
     getAnswer() {
-        console.log('inside function', this.query);
-        switch (this.query) {
+        switch (this.query.q) {
             case 'Ping':
                 return 'OK';
                 break;
@@ -31,13 +30,7 @@ class QueryService {
                 break;
 
             case 'Puzzle':
-                const answer =
-                ` ABCD
-A= 10
-B= 6
-C= 6
-D= 4
-                `
+                const answer = this.solvePuzzle(this.query);
                 return answer;
                 break;
 
@@ -69,6 +62,10 @@ D= 4
                 return 'Hello World!';
                 break;
         }
+    }
+
+    solvePuzzle(query) {
+        return;
     }
 }
 
